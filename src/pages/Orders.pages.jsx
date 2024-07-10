@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useFirebase } from "../context/firebase.context";
 import BookCard from "../components/Card.components";
 import CardGroup from 'react-bootstrap/CardGroup';
+import { Button } from "bootstrap";
 
 const OrdersPage = () => {
 
@@ -15,9 +16,13 @@ const OrdersPage = () => {
         }
     }, [firebase])
 
-    if (!firebase.isLoggedIn) return <h1>Please Login</h1>
+    if (!firebase.isLoggedIn) {
+        return (
+            <Button variant="primary">Login</Button>
+        )
+    }
 
-    console.log("books o", books)
+    console.log("books", books)
 
     return (
         <div>

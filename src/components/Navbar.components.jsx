@@ -20,7 +20,10 @@ const MyNavbar = () => {
                         Add Listing
                     </Nav.Link>
                     <Nav.Link href="/books/orders">Orders</Nav.Link>
-                    <Nav.Link href="/login" onClick={firebase.logout}>Logout</Nav.Link>
+                    {
+                        firebase.isLoggedIn ? <Nav.Link href="/login" onClick={firebase.logout}>Logout</Nav.Link> : <Nav.Link href="/login">Login</Nav.Link>
+                    }
+
 
                 </Nav>
             </Container>
