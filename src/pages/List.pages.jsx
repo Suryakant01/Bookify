@@ -65,7 +65,7 @@ const ListingPage = () => {
                     <Form.Control onChange={(e) => setCoverPic(e.target.files[0])} type="file" />
                 </Form.Group>
 
-                <Button variant="primary" type="submit">
+                <Button variant="primary" type="submit" className="mb-4 mt-4">
                     Add Book
                 </Button>
             </Form>
