@@ -2,6 +2,8 @@ import { Route, Routes } from "react-router-dom";
 
 //Components
 import MyNavbar from "./components/Navbar.components.jsx";
+import HeroSection from "./components/Hero.components.jsx";
+import Footer from "./components/Footer.components.jsx";
 
 //Pages
 import RegisterPage from "./pages/Register.pages.jsx";
@@ -22,6 +24,7 @@ function App() {
   return (
     <div>
       <MyNavbar />
+      <HeroSection />
     <Routes>
       <Route path="/" element = {<HomePage />} />
       <Route path="/register" element = {<RegisterPage />} />
@@ -31,6 +34,7 @@ function App() {
       <Route path="/books/orders" element = {<OrdersPage />} />
       <Route path="/books/order/:bookID" element = {<OrderDetails />} />
     </Routes>
+    <Footer />
     </div>
   )
 }

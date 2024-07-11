@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 
 const HeroSection = () => {
@@ -23,7 +24,9 @@ const HeroSection = () => {
                     <Col style={textStyle}>
                         <h1 className="display-3">Welcome to Bokify</h1>
                         <p className="lead">Your ultimate destination for books</p>
-                        <Button variant="primary" size="lg" className="mt-3">Shop Now</Button>
+                        <NavLink to = "/book/list">
+                        <Button variant="primary" size="lg" className="mt-3">Add Books</Button>
+                        </NavLink>
                     </Col>
                 </Row>
             </Container>

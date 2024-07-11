@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 
 import BookCard from "../components/Card.components";
-import HeroSection from "../components/Hero.components";
-import Footer from "../components/Footer.components";
 
 import { useFirebase } from "../context/firebase.context";
 import { CardGroup, Row, Col } from "react-bootstrap";
@@ -19,7 +17,7 @@ const HomePage = () => {
 
     return (
 <div className="container mt-5">
-    <HeroSection/>
+    
             <CardGroup>
                 <Row>
                     {books.map((book, index) => (
@@ -30,7 +28,6 @@ const HomePage = () => {
                 </Row>
             </CardGroup>
 
-            <Footer/>
         </div>
 
     )

@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useFirebase } from "../context/firebase.context";
 import BookCard from "../components/Card.components";
-import CardGroup from 'react-bootstrap/CardGroup';
+import { CardGroup, Row, Col } from "react-bootstrap";
 import Button from 'react-bootstrap/Button'
+import { NavLink } from "react-router-dom";
+
 
 const OrdersPage = () => {
 
@@ -20,7 +22,9 @@ const OrdersPage = () => {
             <div>
             <h1>You are Not logged in!</h1>
             <h2>Please log in</h2>
+            <NavLink to = "/login">
             <Button variant="primary">Login</Button>
+            </NavLink>
             </div>
         )
     }
@@ -30,9 +34,13 @@ const OrdersPage = () => {
     return (
         <div>
             <CardGroup>
+                <Row>
                 {books.map((books) => (
+                <Col key={books.id} sm={12} md={6} lg={4}>
                     <BookCard link={`/books/order/${books.id}`} key={books.id} id={books.id} {...books.data()} />
+                </Col>
                 ))}
+                </Row>
             </ CardGroup>
         </div>
     )
