@@ -1,10 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Container, Row, Col, Button } from 'react-bootstrap';
+import bookImage from "../Assests/book2.png";
 
 const HeroSection = () => {
     const heroStyle = {
-        background: 'linear-gradient(to bottom, rgba(128, 128, 128, 0.7), rgba(0, 0, 255, 0.7)), url(../Assests/book2.png) no-repeat center center/cover',
+        background: `linear-gradient(to bottom, rgba(128, 128, 128, 0.7), rgba(0, 0, 255, 0.7)), url(${bookImage}) no-repeat center center/cover`,
         color: 'white',
         height: '100vh',
         width: "100%",

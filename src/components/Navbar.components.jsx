@@ -4,6 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { NavLink } from "react-router-dom";
 import { useFirebase } from "../context/firebase.context";
+import bookImage from "../Assests/book.png";
 
 
 const MyNavbar = () => {
@@ -13,7 +14,13 @@ const MyNavbar = () => {
 
         <Navbar bg="dark" data-bs-theme="dark">
             <Container>
-                <Navbar.Brand href="/">Bookify</Navbar.Brand>
+                <Navbar.Brand href="/"><img
+                    src={bookImage}
+                    height="30"
+                    className="d-inline-block align-top"
+                    alt="bookify"
+                />
+                </Navbar.Brand>
                 <Nav className="me-auto">
                     <Nav.Link href="/">Home</Nav.Link>
                     <Nav.Link href="/book/list">
