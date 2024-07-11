@@ -12,7 +12,7 @@ const MyNavbar = () => {
     const firebase = useFirebase();
     return (
 
-        <Navbar bg="dark" data-bs-theme="dark">
+        <Navbar bg="dark" data-bs-theme="dark" sticky="top">
             <Container>
                 <Navbar.Brand href="/"><img
                     src={bookImage}
