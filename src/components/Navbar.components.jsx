@@ -12,7 +12,7 @@ const MyNavbar = () => {
     const firebase = useFirebase();
     return (
 
-        <Navbar bg="dark" data-bs-theme="dark" sticky="top">
+        <Navbar bg="dark" data-bs-theme="dark" sticky="top" collapseOnSelect expand="md">
             <Container>
                 <Navbar.Brand href="/"><img
                     src={bookImage}
@@ -21,20 +21,22 @@ const MyNavbar = () => {
                     alt="bookify"
                 />
                 </Navbar.Brand>
-                <Nav className="me-auto">
-                    <Nav.Link href="/">Home</Nav.Link>
-                    <Nav.Link href="/book/list">
-                        Add Listing
-                    </Nav.Link>
-                    <Nav.Link href="/books/orders">Orders</Nav.Link>
-                    {
-                        firebase.isLoggedIn ? <Nav.Link href="/login" onClick={firebase.logout}>Logout</Nav.Link> : <Nav.Link href="/login">Login</Nav.Link>
-                    }
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">
+                    <Nav className="me-auto">
+                        <Nav.Link href="/">Home</Nav.Link>
+                        <Nav.Link href="/book/list">
+                            Add Listing
+                        </Nav.Link>
+                        <Nav.Link href="/books/orders">Orders</Nav.Link>
+                        {
+                            firebase.isLoggedIn ? <Nav.Link href="/login" onClick={firebase.logout}>Logout</Nav.Link> : <Nav.Link href="/login">Login</Nav.Link>
+                        }
 
-
-                </Nav>
+                    </Nav>
+                </Navbar.Collapse>
             </Container>
-        </Navbar>
+        </Navbar >
 
 
     )
