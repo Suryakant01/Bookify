@@ -4,6 +4,7 @@ import BookCard from "../components/Card.components";
 import { CardGroup, Row, Col } from "react-bootstrap";
 import Button from 'react-bootstrap/Button'
 import { NavLink } from "react-router-dom";
+import HeroSection from "../components/Hero.components";
 
 
 const OrdersPage = () => {
@@ -20,6 +21,7 @@ const OrdersPage = () => {
     if (!firebase.isLoggedIn) {
         return (
             <div>
+                <HeroSection />
             <h1>You are Not logged in!</h1>
             <h2>Please log in</h2>
             <NavLink to = "/login">

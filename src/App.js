@@ -24,7 +24,7 @@ function App() {
   return (
     <div>
       <MyNavbar />
-      <HeroSection />
+      
     <Routes>
       <Route path="/" element = {<HomePage />} />
       <Route path="/register" element = {<RegisterPage />} />

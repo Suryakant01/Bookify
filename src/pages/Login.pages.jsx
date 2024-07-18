@@ -63,7 +63,7 @@ const LoginPage = () => {
             Sign in With Google
                 </Button>
             
-            <h4 className="mt-5 mb-2">Don't have an Account</h4>
+            <h4 className="mt-5 mb-2">Don't have an Account?</h4>
             <Button onClick={registerAcc} variant="primary" type="submit" >
             Register Account
                 </Button>
