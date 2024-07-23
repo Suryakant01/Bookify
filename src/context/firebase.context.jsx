@@ -151,7 +151,8 @@ export const FirebaseProvider = (props) => {
 
     return (
         <FirebaseContext.Provider value={{
-            signUpUserWithEmailAndPass, signinUserWithEmailAndPass,
+            signUpUserWithEmailAndPass,
+            signinUserWithEmailAndPass,
             signinWithGoogle,
             handleCreateNewListing,
             listAllBooks,
