@@ -16,25 +16,25 @@ const LoginPage = () => {
 
 
     useEffect(() => {
-        if(firebase.isLoggedIn) {
+        if (firebase.isLoggedIn) {
             navigate("/")
         }
     }, [firebase, navigate])
 
 
-    const registerAcc = () =>  {
+    const registerAcc = () => {
         navigate("/register")
 
     }
-    
-    const handleSubmit =  async (e) => {
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
         console.log("Login user with email and pass")
 
         const result = await firebase.signinUserWithEmailAndPass(email, password)
 
         console.log("Success and user", result)
-    }   
+    }
     console.log("firebase", firebase);
 
     return (
@@ -53,21 +53,21 @@ const LoginPage = () => {
                     <Form.Control onChange={(e) => setPassword(e.target.value)} value={password} type="password" placeholder="Password" />
                 </Form.Group>
 
-                <Button  variant="primary" type="submit">
+                <Button variant="primary" type="submit">
                     Login
                 </Button>
             </Form>
 
             <h2 className="mt-5 mb-2">Other Methods</h2>
             <Button onClick={firebase.signinWithGoogle} variant="danger" type="submit" >
-            Sign in With Google
-                </Button>
-            
+                Sign in With Google
+            </Button>
+
             <h4 className="mt-5 mb-2">Don't have an Account?</h4>
             <Button onClick={registerAcc} variant="primary" type="submit" >
-            Register Account
-                </Button>
-            
+                Register Account
+            </Button>
+
         </div>
     );
 };

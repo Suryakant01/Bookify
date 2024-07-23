@@ -65,7 +65,7 @@ const BookDetailsPage = () => {
             <h5>ISBN: {data.isbn}</h5>
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Password</Form.Label>
+                <Form.Label>Order</Form.Label>
                 <Form.Control onChange={(e) => setQuantity(e.target.value)} value={quantity} type="number" placeholder="Quantity" />
             </Form.Group>
 
